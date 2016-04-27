@@ -10,9 +10,9 @@ class Player
     @points = DEFAULT_HP
   end
 
-  def attack(player)
-    player.receive_damage
-  end
+  # def attack(player)
+  #   player.receive_damage
+  # end
 
   def receive_damage
     @points -= REDUCE_HP

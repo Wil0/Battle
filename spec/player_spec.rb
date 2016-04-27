@@ -11,10 +11,6 @@ describe Player do
     expect(player.points).to eq 100
   end
 
-  it 'can attack the other palayer' do
-    expect(player).to respond_to(:attack).with(1).argument
-  end
-
   it 'reduces player HP' do
     expect { player.receive_damage }.to change{ player.points }.by(-10)
   end
