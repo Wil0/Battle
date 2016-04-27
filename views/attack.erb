@@ -1,4 +1,8 @@
-<h1><%= @game.player1.name %> scores a hit!</h1>
+<h1><%= @game.current_player.name %> scores a hit!</h1>
 <img src="http://pleated-jeans.com/wp-content/uploads/2011/04/punch001.jpeg">
-<p><%= @game.player2.name %> has been hit, the sucker</p>
-<p><%= @game.player2.name %>'s HP reduced by 10 points, HP now <%= @game.player2.points%></p>
+<p><%= @game.player_being_attacked.name %> has been hit, the sucker</p>
+<p><%= @game.player_being_attacked.name %>'s HP reduced by 10 points, HP now <%= @game.player_being_attacked.points%></p>
+<!--@game.current_player-->
+<form action="/attack" method="post" >
+  <input type="submit" value="Attack!">
+</form>
