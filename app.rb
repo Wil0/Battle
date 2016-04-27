@@ -2,7 +2,8 @@ require 'sinatra/base'
 
 class Battle < Sinatra::Base
   get '/' do
-    'Hello Battle ajHDFGSDworld!'
+    'Hello Battle world!'
+    erb(:index)
   end
 
   # start the server if ruby file executed directly
