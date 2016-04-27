@@ -1,9 +1,14 @@
-<h1>Let the games begin!</h1>
-<img src="http://static1.comicvine.com/uploads/scale_super/5/53501/1010236-3247468281_02604264cd1.jpg">
-<h3><%= @game.player1.name %> vs <%= @game.player2.name %></h3>
-<p><%= @game.player1.name %> hit points: <%= @game.player1.points%></p>
-<p><%= @game.player2.name %> hit points: <%= @game.player2.points%></p>
-<form action="/attack" method="get">
-  <label>Player 1 is up first!</label>
-  <input type="submit" value="Attack!">
-</form>
+<center><h2 style="color:red;">Today's battle:</h2>
+  <style>body {background-color:black;}</style>
+  <img src="http://static1.comicvine.com/uploads/scale_super/5/53501/1010236-3247468281_02604264cd1.jpg">
+  <h3 style="color:white;"><%= @game.player1.name %> vs <%= @game.player2.name %></h3>
+  <label style="color:white;"><%= @game.player1.name %>'s hit points: <%= @game.player1.points%></label>
+  <p></p>
+  <label style="color:white;"><%= @game.player2.name %>'s hit points: <%= @game.player2.points%></label>
+
+  <form action="/attack" method="get">
+    <label> <%= @game.player1.name %> is up first!</label>
+    <h1 style="color:white;">Let the games begin!</h1>
+    <center><input type="submit" value="Attack!"></center>
+  </form>
+</center>

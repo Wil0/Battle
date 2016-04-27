@@ -21,13 +21,14 @@ describe Game do
     expect(game.current_player).to eq player1
   end
 
+  it 'shows who is being attacked' do
+    expect(game.player_being_attacked).to eq player2
+  end
+  
   it 'switches turns' do
     game.switch_turns
     expect(game.current_player).to eq player2
   end
 
-  it 'shows who is being attacked' do
-    expect(game.player_being_attacked).to eq player2
-  end
 
 end

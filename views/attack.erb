@@ -1,8 +1,12 @@
-<h1><%= @game.current_player.name %> scores a hit!</h1>
-<img src="http://pleated-jeans.com/wp-content/uploads/2011/04/punch001.jpeg">
-<p><%= @game.player_being_attacked.name %> has been hit, the sucker</p>
-<p><%= @game.player_being_attacked.name %>'s HP reduced by 10 points, HP now <%= @game.player_being_attacked.points%></p>
-<!--@game.current_player-->
+<center><style>body {background-color:black;}</style>
+  <h1 style="color:red;"><%= ["WOW!", "BLAM!", "BOOM!", "JEEZ!"].sample %> <%= @game.current_player.name %> scores a hit!</h1>
+<img src="http://ninehank.com/wp-content/uploads/spartacus-season-1-810p-bluray-prodji-5-585x329.png">
+<p></p>
+<h1 style="color:white;"><%= @game.player_being_attacked.name %> has been <%= ['smashed', 'hit', 'broken into pieces', 'ruined', 'kicked'].sample %>!<h1>
+<p></p>
+<label style="color:white;"><%= @game.player_being_attacked.name %>'s HP reduced by 10 points, HP now <%= @game.player_being_attacked.points%></label>
+ <p  style="color:white;">Let's see what <%= @game.player_being_attacked.name %> can do to even the combat!!</p>
 <form action="/attack" method="post" >
   <input type="submit" value="Attack!">
 </form>
+</center>
