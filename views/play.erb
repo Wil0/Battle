@@ -1,7 +1,7 @@
 <h1>Let the games begin!</h1>
 <img src="http://static1.comicvine.com/uploads/scale_super/5/53501/1010236-3247468281_02604264cd1.jpg">
-<h3><%= @player1 %> vs <%= @player2 %></h3>
-<p><%= @player2 %> hit points: <%= @player2_points%></p>
+<h3><%= @game.player1.name %> vs <%= @game.player2.name %></h3>
+<p><%= @game.player2.name %> hit points: <%= @game.player2.points%></p>
 <form action="/attack" method="get">
   <input type="submit" value="Attack player 2!">
 </form>
