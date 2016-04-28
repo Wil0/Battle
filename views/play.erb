@@ -6,7 +6,7 @@
   <p></p>
   <label style="color:white;"><%= @game.player2.name %>'s hit points: <%= @game.player2.points%></label>
 
-  <form action="/attack" method="get">
+  <form action="/first_attack" method="get">
     <label> <%= @game.player1.name %> is up first!</label>
     <h1 style="color:white;">Let the games begin!</h1>
     <center><input type="submit" value="Attack!"></center>
