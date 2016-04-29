@@ -28,4 +28,8 @@ class Game
     @players << @players.shift
   end
 
+  def game_over?
+    player2.points == 0
+  end
+
 end

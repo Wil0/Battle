@@ -30,7 +30,10 @@ class Battle < Sinatra::Base
     @game = $game
     @game.switch_turns
     @game.attack(@game.player_being_attacked)
-    erb(:attack)
+    @game.game_over? ? erb(:lose_game) : erb(:attack)
+  end
+
+  get '/lose_game' do
   end
 
   # start the server if ruby file executed directly
