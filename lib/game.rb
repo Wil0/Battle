@@ -37,7 +37,7 @@ class Game
   end
 
   def game_over?
-    player2.points == 0
+      player_being_attacked.points <= 0
   end
 
 end
