@@ -45,5 +45,11 @@ describe Game do
     end
   end
 
+  # describe '#instance and set_instance' do
+  #   it 'should store and return an instance of Game' do
+  #     Game.set_instance(player1, player2)
+  #     expect(Game.instance.last).to eq player2
+  #   end
+  # end
 
 end
