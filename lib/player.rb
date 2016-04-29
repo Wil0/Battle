@@ -1,6 +1,6 @@
 class Player
 
-  attr :name, :points
+  attr :name, :points, :damage
 
   DEFAULT_HP = 100
   REDUCE_HP = 10
@@ -10,8 +10,12 @@ class Player
     @points = DEFAULT_HP
   end
 
+  def damaged_received
+    @damage = Kernel.rand(1..10)
+  end
+
   def receive_damage
-    @points -= Kernel.rand(1..10)
+    @points -= damaged_received
   end
 
 end

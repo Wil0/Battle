@@ -16,8 +16,8 @@ describe Player do
     expect { player.receive_damage }.to change{ player.points }.by(-10)
   end
 
-  # it 'shows HP points lost' do
-  #   allow(Kernel).to receive(:rand).and_return(10)
-  #   expect(player.damaged_received).to eq 10
-  # end
+  it 'shows HP points lost' do
+    allow(Kernel).to receive(:rand).and_return(10)
+    expect(player.damaged_received).to eq 10
+  end
 end
