@@ -7,6 +7,7 @@ feature 'Attack' do
 
   scenario ' Reduce HP by 10' do
     sign_in_and_play
+    allow(Kernel).to receive(:rand).and_return(10)
     click_button('Attack!')
     expect(page).not_to have_content("HP now 100")
     expect(page).to have_content("Matt's HP reduced by 10 points, HP now 90")
